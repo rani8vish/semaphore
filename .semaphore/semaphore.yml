@@ -11,8 +11,14 @@ blocks:
         - name: swift test
           commands:
             - checkout
+            - 'apt install python-swiftclient '
+            - apt install python3-swiftclient
             - swift build -v
             - swift test -v
+        - name: 'Job #2'
+          commands:
+            - 'apt install python-swiftclient '
+            - apt install python3-swiftclient
       agent:
         machine:
           type: e1-standard-2
